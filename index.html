@@ -6,16 +6,24 @@
     <title>Password Generator</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/defaee709d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     
     <div>
-        <h1 id="newPass"></h1>
-        <input id="range" type="range">
-        <p id="rangeVal">15</p>
+        <div class="firstDiv">
+            <h1 id="newPass"></h1>
+            <i class="fa-regular fa-copy" id="copy-btn"></i>
+            <span id="copyMsg">Copied!</span>
+        </div>
 
-        <form>
+        <div class="secondDiv">
+            <input id="range" type="range" min="6" max="20">
+            <p id="rangeVal"></p>
+        </div>
+
+        <div class="thirdDiv">
             <input type="checkbox" name="UpperCase" id="upper">
             <label for="upper">UpperCase</label>
             <br>
@@ -27,7 +35,7 @@
             <br>
             <input type="checkbox" name="Symbols" id="symbols">
             <label for="symbols">Symbols</label>
-        </form>
+        </div>
 
         <button id="btn">
             Generate Password
